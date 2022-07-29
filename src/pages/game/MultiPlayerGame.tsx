@@ -23,9 +23,10 @@ type Props = {
 export function MultiPlayerGame({ settings, goToSettings }: Props) {
   const [isGameOverDialogOpen, setIsGameOverDialogOpen] = useState(false)
   const [isMenuDialogOpen, setIsMenuDialogOpen] = useState(false)
-  const [dialogState, setDialogState] = useState<DialogState>({ players: [] })
-
   const { state, isLocked, startNewGame, revealCard } = useGame(settings)
+  const [dialogState, setDialogState] = useState<DialogState>({
+    players: state.players,
+  })
 
   useEffect(() => {
     if (state.pairsLeft === 0) {
