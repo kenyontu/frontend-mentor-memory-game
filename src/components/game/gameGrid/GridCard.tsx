@@ -19,13 +19,15 @@ export function GridCard({
 }: Props) {
   return (
     <button
+      tabIndex={card.state === 'hidden' ? 0 : -1}
       disabled={card.state !== 'hidden'}
       value={card.value}
       onClick={onClick}
       className={clsx(
-        'flex aspect-square items-center justify-center rounded-[50%] font-bold transition-colors',
+        'flex aspect-square items-center justify-center rounded-[50%] font-bold transition-colors focus:outline-none',
         {
-          'bg-neutral-700 hover:bg-neutral-400': card.state === 'hidden',
+          'bg-neutral-700 hover:bg-neutral-400 focus-visible:ring-2 focus-visible:ring-neutral-700 focus-visible:ring-offset-2':
+            card.state === 'hidden',
           'bg-primary-400': card.state === 'revealed',
           'bg-neutral-300': card.state === 'visible',
           'text-2xl sm:text-[2.75rem]': size === 'normal',

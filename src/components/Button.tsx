@@ -20,11 +20,11 @@ export function Button({
   return (
     <button
       className={clsx(
-        'rounded-full font-bold transition-colors',
+        'rounded-full font-bold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
         {
-          'bg-primary-400 hover:bg-primary-300 text-white':
+          'bg-primary-400 hover:bg-primary-300 focus-visible:ring-primary-400 text-white':
             appearance === 'primary',
-          'bg-neutral-200 text-neutral-700 hover:bg-neutral-400 hover:text-white':
+          'bg-neutral-200 text-neutral-700 hover:bg-neutral-400 hover:text-white focus-visible:ring-neutral-200':
             appearance === 'secondary',
         },
         {
