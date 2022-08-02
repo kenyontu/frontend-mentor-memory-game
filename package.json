@@ -1,9 +1,9 @@
 {
-  "name": "memory",
+  "name": "frontend-mentor-memory-game",
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://kenyontu.github.io/frontend-mentor-memory-game",
+  "homepage": "https://kenyontu.github.io/frontend-mentor-memory-game/",
   "engines": {
     "node": ">=16.x.x",
     "npm": ">=8.0.0"
