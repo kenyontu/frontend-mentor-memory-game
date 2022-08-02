@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "type": "module",
   "engines": {
-    "node": ">=18.x.x",
+    "node": ">=16.x.x",
     "npm": ">=8.0.0"
-   },  
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
