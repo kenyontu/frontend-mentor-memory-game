@@ -26,10 +26,7 @@ function getIconUrl(iconId: string) {
   if (!icon) {
     throw new Error(`There is no icon for the id ${iconId}`)
   }
-
-  // Needed to obtain the resolved url of a file in the public folder.
-  // Source: https://vitejs.dev/guide/assets.html#importing-asset-as-url
-  return new URL(`/icons/${icon}`, import.meta.url).href
+  return `/icons/${icon}`
 }
 
 type Props = {
