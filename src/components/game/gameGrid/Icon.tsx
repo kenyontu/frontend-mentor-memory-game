@@ -26,7 +26,7 @@ function getIconUrl(iconId: string) {
   if (!icon) {
     throw new Error(`There is no icon for the id ${iconId}`)
   }
-  return `/icons/${icon}`
+  return `icons/${icon}`
 }
 
 type Props = {
